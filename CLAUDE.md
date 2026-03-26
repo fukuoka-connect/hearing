@@ -87,3 +87,90 @@ CV前に無料特典・プレゼントを提示する。
 ### カリギュラ効果
 ファーストビューのキャッチコピーに
 「実は〇〇だった」「知らないと損する」などを活用する。
+
+## 日付デザインテクニック（イベント・キャンペーンLPに必須）
+
+### 基本原則：サイズ階層を必ず作る
+- 年・曜日 → 小さく（0.55〜0.7em）
+- 月・日　 → 大きく（メインサイズ）
+- 時間　　 → 中くらい（0.75em）
+
+### スタイル別CSS実装
+
+#### ① フラット型（シンプル・ビジネス向け）
+```css
+.date { font-size: 2.5rem; font-weight: 900; }
+.date-sub { font-size: 0.6em; font-weight: 400; display: block; }
+```
+
+#### ② 枠線型（フォーマル・イベント向け）
+```css
+.date-box {
+  border: 2px solid #000;
+  padding: 8px 16px;
+  display: inline-block;
+}
+```
+
+#### ③ 丸囲み型（かわいい・ポップ向け）
+```css
+.date-circle {
+  width: 80px; height: 80px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+```
+
+#### ④ 左ボーダー型（すっきり・モダン向け）
+```css
+.date-border {
+  border-left: 4px solid #000;
+  padding-left: 12px;
+}
+```
+
+#### ⑤ 塗り丸型（インパクト・目立たせたい）
+```css
+.date-filled {
+  background: #000; color: #fff;
+  border-radius: 50%;
+  width: 80px; height: 80px;
+  display: flex; align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+```
+
+#### ⑥ 角丸カード型（スマホ・アプリ風）
+```css
+.date-card {
+  background: #000; color: #fff;
+  border-radius: 12px;
+  padding: 8px 16px;
+}
+```
+
+#### ⑦ 矢印・期間型（セール・キャンペーン向け）
+```css
+.date-range::after {
+  content: '→';
+  margin: 0 8px;
+  font-size: 0.8em;
+}
+```
+
+### 期間表示のパターン
+- 単日：6.20[Thu]
+- 期間：6/24(Mon) → 8/30(Sun)
+- 時間付き：6.20 Thu 10:00-11:00
+
+### 使用判断
+- フォーマル・ビジネス → ①フラット・④左ボーダー
+- イベント・セミナー → ②枠線・⑥角丸カード
+- ポップ・かわいい → ③丸囲み
+- インパクト重視 → ⑤塗り丸
+- キャンペーン・セール → ⑦矢印期間型
