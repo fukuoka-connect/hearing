@@ -194,3 +194,34 @@ LP制作時はGoogle Fontsから以下の基準で選ぶ。
 - 見出しだけ個性的なフォントを使う
 - フォントは最大2種類まで（見出し用＋本文用）
 - font-display: swap を必ず入れる（表示速度対策）
+
+## 線のデザインテクニック（見出し・強調に積極活用）
+
+テキストの強調・装飾には以下の線スタイルをクライアントの
+イメージに合わせて選んで実装する。
+
+### 基本系
+- 普通の線：`text-decoration: underline;`
+- 上下挟む：`border-top` + `border-bottom;`
+- 太い線：`border-bottom: 3px solid;`
+
+### 個性系
+- ドット線：`border-bottom: 2px dotted;`
+- 波線：`text-decoration: underline wavy;`
+- 破線：`border-bottom: 2px dashed;`
+- 二重線：`border-bottom: 3px double;`
+- 太い破線：`border-bottom: 4px dashed;`
+
+### 演出系
+- マーカー風：`background: linear-gradient(transparent 60%, #ffe066 60%);`
+- かすれマーカー：同上 + rgba透過色
+- 塗り帯：background色 + padding
+- ずらし線：`::after` 擬似要素でoffset
+- 手書き丸囲み：`border-radius: 50% 45% 55% 48%;`
+
+### 使用判断
+- フォーマル・クリーン → 普通の線・二重線
+- ポップ・かわいい → 波線・ドット線
+- おしゃれ・トレンド → マーカー風・かすれマーカー
+- 手作り感・温かみ → 手書き丸囲み・破線
+- 力強さ → 太い線・ペンキ風
