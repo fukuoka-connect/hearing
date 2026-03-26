@@ -174,3 +174,23 @@ CV前に無料特典・プレゼントを提示する。
 - ポップ・かわいい → ③丸囲み
 - インパクト重視 → ⑤塗り丸
 - キャンペーン・セール → ⑦矢印期間型
+
+## フォント選定ルール
+
+LP制作時はGoogle Fontsから以下の基準で選ぶ。
+ヒアリングのQ15（デザイントーン）を参照して判断する。
+
+- 温かみ・アットホーム → Kaisei Decol / Yomogi
+- 高級感・上品 → Noto Serif JP / Shippori Mincho
+- シンプル・モダン → Zen Kaku Gothic New / Noto Sans JP
+- 和風・伝統的 → Zen Old Mincho / Noto Serif JP
+- 元気・にぎやか → Rampart One / Dela Gothic One
+- プロフェッショナル → BIZ UDPGothic / Noto Sans JP
+- アウトドア・力強さ → Dela Gothic One
+- ナチュラル・手作り感 → Yomogi / Kaisei Decol
+
+### 原則
+- 本文は必ずNoto Sans JP（可読性最優先）
+- 見出しだけ個性的なフォントを使う
+- フォントは最大2種類まで（見出し用＋本文用）
+- font-display: swap を必ず入れる（表示速度対策）
